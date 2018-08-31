@@ -1,3 +1,0 @@
-gorm:
-  driver: mysql
-  conn_str: USER:PASSWORD@tcp(127.0.0.1:3306)/dbname
