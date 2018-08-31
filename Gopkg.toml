@@ -33,9 +33,9 @@
   name = "github.com/labstack/echo"
   version = "2.2.0"
 
-[[constraint]]
-    branch = "master"
-    name = "github.com/eurie-inc/echo-sample"
+#[[constraint]]
+#    branch = "master"
+#    name = "github.com/eurie-inc/echo-sample"
 
 [[constraint]]
     branch = "master"

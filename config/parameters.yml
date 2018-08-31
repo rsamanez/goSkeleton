@@ -1,0 +1,3 @@
+gorm:
+  driver: mysql
+  conn_str: aldo.diaz:wSHFk5pMrC6k@tcp(172.19.20.212:3306)/bongo

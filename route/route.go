@@ -25,12 +25,7 @@ func Init() *echo.Echo {
 	// Routes
 	v1 := e.Group("/api/v1")
 	{
-		//v1.POST("/members", api.PostMember())
-		//v1.GET("/members", api.GetMembers())
-		v1.GET("/members/:id", api.GetMember())
-		//v1.GET("/members/:id", func(c echo.Context) error {
-		//	return c.String(200, "test")
-		//})
+		v1.GET("/partners/:id", api.GetPartner())
 	}
 	return e
 }

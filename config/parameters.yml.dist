@@ -1,0 +1,3 @@
+gorm:
+    driver: dialect
+    conn_str: user:password@/database
