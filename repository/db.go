@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"echo-sample/_vendor-20180829165813/github.com/labstack/gommon/log"
+	"github.com/labstack/gommon/log"
 	"github.com/jinzhu/configor"
 	"github.com/jinzhu/gorm"
 	"sync"
@@ -17,17 +17,25 @@ var once sync.Once
 var parameters =  struct {
 	Gorm struct {
 		Driver string `yaml:"driver"`
-		ConnStr string `yaml:"conn_str"`
+		DbUser string `yaml:"db_user"`
+		DbPassword string `yaml:"db_password"`
+		DbHost string `yaml:"db_host"`
+		DbPort string `yaml:"db_port"`
+		DbName string `yaml:"db_name"`
 	}
 }{}
 
 func GetManager() *manager {
 	once.Do(func() {
 		configor.Load(&parameters, "config/parameters.yml")
-
-		db, err := gorm.Open(parameters.Gorm.Driver, parameters.Gorm.ConnStr)
+		dbParameter := parameters.Gorm.DbUser + ":" +
+			parameters.Gorm.DbPassword + "@tcp(" +
+			parameters.Gorm.DbHost + ":" +
+			parameters.Gorm.DbPort + ")/" +
+			parameters.Gorm.DbName + "?charset=utf8&parseTime=True"
+		db, err := gorm.Open(parameters.Gorm.Driver, dbParameter)
 		if err != nil {
-			log.Fatal("Fail connect to db")
+			log.Fatal("Fail connect to db Error:"+ err.Error())
 		}
 		instance = &manager {Db: db}
 	})

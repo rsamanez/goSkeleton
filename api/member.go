@@ -1,13 +1,11 @@
 package api
 
 import (
-	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"net/http"
 	"strconv"
-	"template/usecase"
+	"rommel_samples/goSkeleton/usecase"
 	"github.com/labstack/echo"
-	"github.com/valyala/fasthttp"
-)
+	)
 
 
 func GetPartner() echo.HandlerFunc {
@@ -24,7 +22,7 @@ func GetPartner() echo.HandlerFunc {
 			return echo.NewHTTPError(http.StatusBadRequest, msg)
 		}
 
-		return c.JSON(fasthttp.StatusOK, result)
+		return c.JSON(http.StatusOK, result)
 	}
 }
 

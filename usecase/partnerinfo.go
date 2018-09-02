@@ -1,9 +1,8 @@
 package usecase
 
 import (
-	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"strconv"
-	"template/repository"
+	"rommel_samples/goSkeleton/repository"
 )
 
 /**

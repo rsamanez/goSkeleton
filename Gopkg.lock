@@ -53,15 +53,15 @@
   revision = "4edaf76fe18865e36de734d887f4c01bd05707af"
 
 [[projects]]
-  branch = "master"
-  digest = "1:6ef2a35f9f2d36d750c2b3b2897729ae0d3f4ab88f2e2fec1b7e8d47bda23fdc"
+  digest = "1:b6f4477f09f11785097a121811f3a90d8d26cab73c1aa71abda859bdf6ad2334"
   name = "github.com/jinzhu/gorm"
   packages = [
     ".",
     "dialects/mysql",
   ]
   pruneopts = "UT"
-  revision = "32455088f24d6b1e9a502fb8e40fdc16139dbea8"
+  revision = "6ed508ec6a4ecb3531899a69cbc746ccf65a4166"
+  version = "v1.9.1"
 
 [[projects]]
   branch = "master"
@@ -72,39 +72,15 @@
   revision = "04140366298a54a039076d798123ffa108fff46c"
 
 [[projects]]
-  digest = "1:cdbed6a7b574b13bbabcd8c36c5be56d6444789bab21fcd37d39655eab0b2141"
-  name = "github.com/klauspost/compress"
-  packages = [
-    "flate",
-    "gzip",
-    "zlib",
-  ]
-  pruneopts = "UT"
-  revision = "b939724e787a27c0005cabe3f78e7ed7987ac74f"
-  version = "v1.4.0"
-
-[[projects]]
-  digest = "1:4ea0668d490ca32a38366453a486e2e8c60fbdaf1f2607c96b4a093d8a5c8de7"
-  name = "github.com/klauspost/cpuid"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "ae7887de9fa5d2db4eaa8174a7eff2c1ac00f2da"
-  version = "v1.1"
-
-[[projects]]
-  digest = "1:be2c40de1802aff11e749c9a5d6bd4a581fa831113c4940b77e3212306ec0b4c"
+  digest = "1:87f801436ec4799e0e043ab348ff9f3e95b1b3761138158f0950ac67695cc272"
   name = "github.com/labstack/echo"
   packages = [
     ".",
-    "context",
-    "engine",
-    "engine/fasthttp",
-    "log",
     "middleware",
   ]
   pruneopts = "UT"
-  revision = "e08070379af60f5b9c0fb5bb2d1527ba9624fe43"
-  version = "v2.2.0"
+  revision = "6d227dfea4d2e52cb76856120b3c17f758139b4e"
+  version = "3.3.5"
 
 [[projects]]
   digest = "1:568171fc14a3d819b112c3e219d351ea7b05e8dad7935c4168c6b3373244a686"
@@ -144,18 +120,6 @@
   revision = "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
 
 [[projects]]
-  digest = "1:15ad8a80098fcc7a194b9db6b26d74072a852e4faa957848c8118193d3c69230"
-  name = "github.com/valyala/fasthttp"
-  packages = [
-    ".",
-    "fasthttputil",
-    "stackless",
-  ]
-  pruneopts = "UT"
-  revision = "e5f51c11919d4f66400334047b897ef0a94c6f3c"
-  version = "v20180529"
-
-[[projects]]
   branch = "master"
   digest = "1:268b8bce0064e8c057d7b913605459f9a26dcab864c0886a56d196540fbf003f"
   name = "github.com/valyala/fasttemplate"
@@ -165,19 +129,15 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:3f3a05ae0b95893d90b9b3b5afdb79a9b3d96e4e36e099d841ae602e4aca0da8"
+  digest = "1:42c7e30272119bd61cee83d6448f31bcb408799a5e1802edc53cec1378e19941"
   name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
+  packages = [
+    "acme",
+    "acme/autocert",
+    "ssh/terminal",
+  ]
   pruneopts = "UT"
   revision = "182538f80094b6a8efaade63a8fd8e0d9d5843dd"
-
-[[projects]]
-  branch = "master"
-  digest = "1:76ee51c3f468493aff39dbacc401e8831fbb765104cbf613b89bef01cf4bad70"
-  name = "golang.org/x/net"
-  packages = ["context"]
-  pruneopts = "UT"
-  revision = "8a410e7b638dca158bf9e766925842f6651ff828"
 
 [[projects]]
   branch = "master"
@@ -216,9 +176,8 @@
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/mysql",
     "github.com/labstack/echo",
-    "github.com/labstack/echo/engine/fasthttp",
     "github.com/labstack/echo/middleware",
-    "github.com/valyala/fasthttp",
+    "github.com/labstack/gommon/log",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

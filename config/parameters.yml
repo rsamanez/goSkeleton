@@ -1,0 +1,12 @@
+gorm:
+    driver: mysql
+    db_user: root
+    db_password: root
+    db_host: 127.0.0.1
+    db_port: 3306
+    db_name: sample
+server:
+    http_port: 8888
+    https_port: 443
+debug:
+    logger: true
