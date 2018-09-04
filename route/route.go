@@ -3,7 +3,7 @@ package route
 import (
 	"github.com/labstack/echo"
 	echoMw "github.com/labstack/echo/middleware"
-	"rommel_samples/goSkeleton/api"
+	"goMysqlChecking/api"
 	"github.com/jinzhu/configor"
 )
 
@@ -32,7 +32,7 @@ func Init() *echo.Echo {
 	// Routes
 	v1 := e.Group("/api/v1")
 	{
-		v1.GET("/partners/:id", api.GetPartner())
+		v1.GET("/checkdb", api.GetCheckDb())
 	}
 	return e
 }

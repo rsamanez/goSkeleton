@@ -1,12 +1,13 @@
 gorm:
     driver: mysql
-    db_user: root
-    db_password: root
+    db_user: webuser
+    db_password: K4m1K4z3
     db_host: 127.0.0.1
     db_port: 3306
-    db_name: sample
+    db_name: sampleX
 server:
-    http_port: 8888
-    https_port: 443
+    http_port: 8080
 debug:
     logger: true
+checkdb:
+    loop_timer: 5

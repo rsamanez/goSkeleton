@@ -35,9 +35,11 @@ func GetManager() *manager {
 			parameters.Gorm.DbName + "?charset=utf8&parseTime=True"
 		db, err := gorm.Open(parameters.Gorm.Driver, dbParameter)
 		if err != nil {
-			log.Fatal("Fail connect to db Error:"+ err.Error())
+			log.Print("Fail connect to db Error:"+ err.Error())
+			instance = nil
+		}else {
+			instance = &manager{Db: db}
 		}
-		instance = &manager {Db: db}
 	})
 	return instance
 }

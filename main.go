@@ -3,7 +3,8 @@ package main
 
 import (
 	"github.com/jinzhu/configor"
-	"rommel_samples/goSkeleton/route"
+	"goMysqlChecking/route"
+	"goMysqlChecking/gorutine"
 )
 
 var serverConfig =  struct {
@@ -16,7 +17,8 @@ var serverConfig =  struct {
 func main() {
 
 	configor.Load(&serverConfig, "config/parameters.yml")
+	go gorutine.DbCheckRoutine()
 	router := route.Init()
-	//router.Logger.Fatal(router.Start(":"+serverConfig.Server.HttpPort))
-	router.Logger.Fatal(router.StartTLS(":"+serverConfig.Server.HttpsPort, "cert.pem", "key.pem"))
+	router.Logger.Fatal(router.Start(":"+serverConfig.Server.HttpPort))
+
 }
